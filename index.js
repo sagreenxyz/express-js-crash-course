@@ -31,8 +31,9 @@ const members = [
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Route for Get Members
 app.get('/api/members', (req, res) => {
-
+    res.json(members);
 });
 
 app.listen(PORT, () => {
