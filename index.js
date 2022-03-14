@@ -23,7 +23,7 @@ app.get('/api/members', (req, res) => {
 });
 
 app.get('/api/members/:id', (req, res) => {
-    res.send(req.params.id);
+    res.json(members.filter(member => member.id === parseInt(req.params.id)));
 });
 
 app.listen(PORT, () => {
