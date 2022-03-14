@@ -7,6 +7,14 @@ const PORT = process.env.PORT || 5000;
 
 const members = require('./Members');
 
+const logger = (req, res, next) => {
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
+    next();
+};
+
+// MIDDLEWARE
+app.use(logger);
+
 // ROUTE HANDLERS
 
 // Set Static Folder
