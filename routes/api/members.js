@@ -22,7 +22,9 @@ router.get('/:id', (req, res) => {
 
 // Create Member
 router.post('/', (req, res) => {
-    res.send(req.body);
+    const newMember = {
+        
+    }
 });
 
 module.exports = router;
