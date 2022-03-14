@@ -7,10 +7,8 @@ const PORT = process.env.PORT || 5000;
 
 // ROUTE HANDLERS
 
-// Index Route Handler
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+// Set Static Folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}; http://localhost:${PORT}`)
